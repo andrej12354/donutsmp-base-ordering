@@ -11,34 +11,31 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      height: 100vh;
       background: url('https://cdn.discordapp.com/attachments/1435335056636903608/1435341833508093953/16dea10f-7685-48dd-a616-7da0f9124778.png?ex=690b9dc0&is=690a4c40&hm=abfc7fdce0779f7fc43ee5bc7e5ef96ab97df9d54f08d60df7a0f2599d417a4a&') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: white;
+      overflow-x: hidden;
       position: relative;
-      overflow: hidden;
     }
 
-    /* dark overlay for better readability */
     body::before {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0, 10, 30, 0.7);
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(4px);
       z-index: 0;
     }
 
-    .container {
+    header {
       text-align: center;
+      padding: 80px 20px 60px;
+      position: relative;
       z-index: 2;
-      padding: 20px;
     }
 
     h1 {
@@ -47,62 +44,126 @@
       background: linear-gradient(90deg, #00b4ff, #0077ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-      text-shadow: 0 0 25px rgba(0, 128, 255, 0.7);
+      text-shadow: 0 0 25px rgba(0, 128, 255, 0.6);
     }
 
-    p {
+    p.subtitle {
       font-size: 1.2rem;
-      color: #dce8ff;
-      margin-bottom: 40px;
+      color: #cdd9ff;
+      margin-top: 15px;
     }
 
-    a {
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
       text-decoration: none;
       background: linear-gradient(90deg, #0077ff, #00b4ff);
       color: white;
-      padding: 15px 40px;
+      padding: 15px 45px;
       border-radius: 50px;
       font-size: 1.1rem;
       font-weight: 600;
       transition: 0.3s;
-      box-shadow: 0 0 25px rgba(0, 128, 255, 0.5);
+      box-shadow: 0 0 25px rgba(0, 128, 255, 0.4);
     }
 
-    a:hover {
+    .btn:hover {
       transform: scale(1.08);
       box-shadow: 0 0 35px rgba(0, 128, 255, 0.8);
     }
 
-    /* floating light animation */
+    section {
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #00b4ff, #0077ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #dce8ff;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      margin-top: 25px;
+      background: rgba(0, 119, 255, 0.2);
+      border: 2px solid rgba(0, 180, 255, 0.6);
+      color: #aee1ff;
+      padding: 12px 30px;
+      border-radius: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #9cbfff;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 2;
+      position: relative;
+    }
+
     .glow {
       position: absolute;
-      width: 500px;
-      height: 500px;
+      width: 600px;
+      height: 600px;
       background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
-      filter: blur(100px);
+      filter: blur(120px);
       animation: moveGlow 8s infinite alternate ease-in-out;
       z-index: 1;
     }
 
     @keyframes moveGlow {
-      0% { transform: translate(-20px, 0); }
-      100% { transform: translate(40px, -20px); }
+      0% { transform: translate(-50px, 0); }
+      100% { transform: translate(70px, -30px); }
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 2.2rem; }
+      h1 { font-size: 2.3rem; }
+      h2 { font-size: 1.8rem; }
       p { font-size: 1rem; }
-      a { padding: 12px 30px; font-size: 1rem; }
+      .btn { padding: 12px 30px; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
   <div class="glow"></div>
-  <div class="container">
+
+  <header>
     <h1>Donut SMP Base Orders</h1>
-    <p>Want a custom-built base in Donut SMP?<br>Join our Discord to place your order!</p>
-    <a href="https://discord.gg/PS5DPbUNzB" target="_blank">Join Discord</a>
-  </div>
+    <p class="subtitle">Custom-built bases crafted by skilled builders — made just for your Donut SMP adventures.</p>
+    <a href="https://discord.gg/PS5DPbUNzB" target="_blank" class="btn">Join Our Discord</a>
+  </header>
+
+  <section id="about">
+    <h2>About Our Service</h2>
+    <p>We specialize in creating **custom bases** for Donut SMP players — whether you're looking for a powerful underground vault, 
+       a stylish sky base, or a compact starter hideout.  
+       Our builders focus on **design, defense, and style**, making sure your base stands out and keeps you safe.</p>
+  </section>
+
+  <section id="preview">
+    <h2>Preview Our Builds</h2>
+    <p>We’re currently working on uploading examples of our best builds so you can see what we can do.</p>
+    <div class="coming-soon">COMING SOON</div>
+  </section>
+
+  <footer>
+    © 2025 Donut SMP Builders — All rights reserved. | Designed by Donut Team
+  </footer>
 </body>
 </html>
