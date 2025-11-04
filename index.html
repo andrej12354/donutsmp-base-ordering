@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donut SMP Base Ordering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('https://cdn.discordapp.com/attachments/1435335056636903608/1435341833508093953/16dea10f-7685-48dd-a616-7da0f9124778.png?ex=690b9dc0&is=690a4c40&hm=abfc7fdce0779f7fc43ee5bc7e5ef96ab97df9d54f08d60df7a0f2599d417a4a&') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* dark overlay for better readability */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 10, 30, 0.7);
+      backdrop-filter: blur(3px);
+      z-index: 0;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00b4ff, #0077ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+      text-shadow: 0 0 25px rgba(0, 128, 255, 0.7);
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #dce8ff;
+      margin-bottom: 40px;
+    }
+
+    a {
+      text-decoration: none;
+      background: linear-gradient(90deg, #0077ff, #00b4ff);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 0 25px rgba(0, 128, 255, 0.5);
+    }
+
+    a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px rgba(0, 128, 255, 0.8);
+    }
+
+    /* floating light animation */
+    .glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
+      filter: blur(100px);
+      animation: moveGlow 8s infinite alternate ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes moveGlow {
+      0% { transform: translate(-20px, 0); }
+      100% { transform: translate(40px, -20px); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1rem; }
+      a { padding: 12px 30px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <h1>Donut SMP Base Orders</h1>
+    <p>Want a custom-built base in Donut SMP?<br>Join our Discord to place your order!</p>
+    <a href="https://discord.gg/PS5DPbUNzB" target="_blank">Join Discord</a>
+  </div>
+</body>
+</html>
